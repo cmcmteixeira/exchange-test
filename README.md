@@ -1,7 +1,7 @@
 #### Getting Started
 - Install [docker](https://docs.docker.com/install/) and [docker-compose](https://docs.docker.com/compose/install/)
 - Run `docker-compose build` (unfortunately this may take 
-a while as the dependencies have to be fetched (shouldn't take more than 2 or 3m); it usually takes less than 10 minutes)
+a while as the dependencies have to be fetched (shouldn't take more than 3 or 4m)
 - Run `docker-compose up -d` 
 - Check if the  service is up by running `curl -v http://127.0.0.1:9000/_meta/health` ; 
 - You can now access the service on : `localhost:9000` !!!
@@ -9,7 +9,7 @@ a while as the dependencies have to be fetched (shouldn't take more than 2 or 3m
 
 #### Logging
 Correlation id's are being printed with the log calls which can be used to group logs generated
-within the same call/transaction.
+within the same call/transaction (these id's are the same as the ones exported to Zipkin).
 In order to check the logs printed by the service you can run:
 `docker-compose logs -f exchange`
 ![](imgs/logs.png)
@@ -38,5 +38,5 @@ container.
 - Zipkin (Trace visualization & Storage)
 
 #### 
-This project was loosely inspired by [this](https://github.com/cmcmteixeira/foobar-tracing-demo) and [this](https://github.com/porchgeese/service.g8) template was used to create the service (though some alterations had to be made because the template is not 100% correct). 
-Note:  (both the porchgeese org and the foobar demo we developed and are owned by me)
+This project was loosely inspired by [this](https://github.com/cmcmteixeira/foobar-tracing-demo). [This](https://github.com/porchgeese/service.g8) template was used to create the service (though some alterations had to be made because the template is not 100% correct). 
+Note:  (both the porchgeese org and the foobar demo were developed and are owned by me)
