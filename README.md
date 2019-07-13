@@ -6,7 +6,7 @@ a while as the dependencies have to be fetched (shouldn't take more than 3 or 4m
 - Check if the  service is up by running `curl -v http://127.0.0.1:9000/_meta/health` ; 
 - You can now access the service on : `localhost:9000` !!!
 - Try `curl -X POST "localhost:9000/api/convert" --data '{"fromCurrency": "GBP", "toCurrency": "EUR", "amount": 987}'`
-- Executing `requests.sh` will fire 100 requests (this makes the metrics a bit more interesting)
+- Executing `requests.sh` will initially fire up to 50 request in parallel and then fire one request at a time (this makes the metrics a little bit more interesting)
 
 
 #### Logging
