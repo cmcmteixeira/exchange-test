@@ -5,6 +5,8 @@ a while as the dependencies have to be fetched (shouldn't take more than 3 or 4m
 - Run `docker-compose up -d` 
 - Check if the  service is up by running `curl -v http://127.0.0.1:9000/_meta/health` ; 
 - You can now access the service on : `localhost:9000` !!!
+- Try `curl -X POST "localhost:9000/api/convert" --data '{"fromCurrency": "GBP", "toCurrency": "EUR", "amount": 987}'`
+- Executing `requests.sh` will fire 100 requests (this makes the metrics a bit more interesting)
 
 
 #### Logging
@@ -39,4 +41,4 @@ container.
 
 #### 
 This project was loosely inspired by [this](https://github.com/cmcmteixeira/foobar-tracing-demo). [This](https://github.com/porchgeese/service.g8) template was used to create the service (though some alterations had to be made because the template is not 100% correct). 
-Note:  (both the porchgeese org and the foobar demo were developed and are owned by me)
+Note:  (both the porchgeese org and the foobar demo were developed and are owned by me).
